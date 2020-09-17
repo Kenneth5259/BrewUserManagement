@@ -1,0 +1,27 @@
+{
+  "name": "brewusermanagement",
+  "version": "1.0.0",
+  "description": "User Management Microservice",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenneth5259/BrewUserManagement.git"
+  },
+  "author": "Kenneth Carroll",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kenneth5259/BrewUserManagement/issues"
+  },
+  "homepage": "https://github.com/Kenneth5259/BrewUserManagement#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
