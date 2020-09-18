@@ -25,6 +25,12 @@ mongoose.connect(`mongodb://${process.env.DB_ADDR}:${process.env.DB_PORT}/brew`)
         console.log(err);
     })
 
+// Handle HTML URL encoding
+app.use(express.urlencoded({useNewUrlParser: true}));
+
+// Handle json from API
+app.use(express.json());
+
 // add router middleware
 app.use('/', userRouter);
 
