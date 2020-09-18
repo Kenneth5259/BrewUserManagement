@@ -21,8 +21,8 @@ router.get('/signin', (req, res, next) => {
 })
 
 // router post methods
-router.post('/register', userController.postNewUser);
-router.post('/signin', userController.postVerifyUser);
+router.post('/register', userController.registerNewUser);
+router.post('/signin/local', userController.loginExistingUser);
 
 // export the router
 module.exports = router;

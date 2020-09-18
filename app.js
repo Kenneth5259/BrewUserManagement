@@ -2,6 +2,10 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const passport = require('passport');
+
+// user model
+const User = require('./models/user');
 
 // user modules import
 const userRouter = require('./routes/user-routes');
@@ -30,6 +34,14 @@ app.use(express.urlencoded({useNewUrlParser: true}));
 
 // Handle json from API
 app.use(express.json());
+
+// Passport Configuration
+app.use(passport.initialize());
+app.use(passport.session());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+passport.use(User.createStrategy());
 
 // add router middleware
 app.use('/', userRouter);
