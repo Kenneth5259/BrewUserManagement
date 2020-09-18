@@ -7,7 +7,9 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const userSchema = mongoose.Schema({
     firstName: String,
     lastName: String,
-    email: String
+    email: String,
+    reviews: [mongoose.Schema.Types.ObjectId],
+    dob: Date
 });
 
 // see passport-local-mongoose docs for other optional fields in {}

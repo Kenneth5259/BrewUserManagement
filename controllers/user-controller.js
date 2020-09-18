@@ -1,7 +1,8 @@
 // import the user model
 const User = require('../models/user.js');
-
-const secretKey="KennethJamesCarroll"
+const dotenv = require('dotenv');
+dotenv.config();
+const secretKey= process.env.SECRET;
 
 // import passport and strategies
 const passport = require('passport');
